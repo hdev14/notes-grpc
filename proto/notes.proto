@@ -12,3 +12,17 @@ message Note {
   string title = 2;
   string description = 3;
 }
+
+message NoteFindRequest {
+  int32 id = 1;
+}
+
+message NoteFindResponse {
+  Note note = 1;
+}
+
+message NoteListResponse {
+  repeated Note notes = 1;
+}
+
+
