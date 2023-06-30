@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service Notes {
+  rpc List (Void) returns (NoteListResponse);
+  rpc Find (NoteFindRequest) returns (NoteFindResponse);
+}
+
+message Void {}
+
+message Note {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+}
+
+message NoteFindRequest {
+  int32 id = 1;
+}
+
+message NoteFindResponse {
+  Note note = 1;
+}
+
+message NoteListResponse {
+  repeated Note notes = 1;
+}
+
+
