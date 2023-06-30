@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-service NoteService {
+service Notes {
   rpc List (Void) returns (NoteListResponse);
   rpc Find (NoteFindRequest) returns (NoteFindResponse);
 }
